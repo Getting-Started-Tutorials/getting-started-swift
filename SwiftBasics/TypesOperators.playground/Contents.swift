@@ -7,15 +7,21 @@ import Foundation
 class LightSwitch {
     var on: Bool = true
     var dimmer: Int = 3
+    var floatDimmer: Float = 3.15
+    var dobuleDimmer: Double = 3.1111554
 }
 
 var livingRoomSwitch = LightSwitch()
 livingRoomSwitch.on
 //: ### Example 2: Strings and Characters
 var dollarSign: Character = "$"
+var euroSign: Character = "€"
+var myName: String = "divyanshu"
 var myFirstSwiftString: String = "mo' money"
 var mySecondSwiftString: String = "mo' problems"
 var concatenatedString:String = myFirstSwiftString + ", " + mySecondSwiftString
+
+type(of: euroSign)
 
 //: ### Stay tuned for more on Optionals and Tuples in the upcoming lessons!
 
