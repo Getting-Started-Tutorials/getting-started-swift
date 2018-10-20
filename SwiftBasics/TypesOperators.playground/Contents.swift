@@ -76,6 +76,18 @@ answer2
 /*:
 question ? answer1 : answer2
 */
+
+var ignitus = true
+
+if ignitus {
+    print("welcome to Ignitus!")
+}else{
+    print("not welcome to ignitus!")
+}
+
+!ignitus ? print("welcome") : print("nope!")
+
+
 // This statement ...
 //if hungry {
 //    print("Let's eat!")
