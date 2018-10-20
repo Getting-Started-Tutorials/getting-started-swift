@@ -17,17 +17,17 @@ var jamesFavoriteBaseballTeam = "Atlanta Braves"
 
 var nWithTilde = "\u{006E}\u{0303}"
 nWithTilde.unicodeScalars.count
-nWithTilde.characters.count
+nWithTilde.count
 
 //: ## Emoji characters
-let similarTruth = "💰can't buy me 💖"
+let similarTruth = "💰 🍞 can't buy me 💖"
 
 // Here's one way to initialize an empty Swift string
-var characterPoorString = ""
+var characterPoorString = "abcdef"
 
 // And here's another 
 let potentialRichString = String()
-characterPoorString.characters
+characterPoorString.count
 
 //: ## String interpolation
 
@@ -50,6 +50,9 @@ dogName = "Lil Frankie"
 doggyDiet = "\(dogName) eats ?lbs of dog food per month"
 //: ## A String isn't just a String
 
+var myName = "divyanshu"
+print("my name is \(myName)")
+
 //: ### Through the .characters property we can access an array of characters
 var password = "Meet me in St. Louis"
 for character in password.characters {
@@ -59,6 +62,17 @@ for character in password.characters {
     }
 }
 
+for char in myName.characters{
+    if char == "a"{
+        print("got it")
+    }
+    else{
+        
+    }
+}
+
 //: ### A String can be treated as an NSString
 let newPassword = password.replacingOccurrences(of: "e", with: "3")
+
+let modifiedName = myName.replacingOccurrences(of: "d", with: "4")
 
