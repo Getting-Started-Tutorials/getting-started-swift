@@ -168,14 +168,60 @@ class BetterViewController: UIViewController {
 //: ### DownCasting
 class Beverage {
     var category: String
-    
-    
-    
+    init (category: String){
+        self.category = category
+    }
 }
+
+class HotCofee: Beverage{
+    var pairing: String
+    
+    init(category: String, pairing: String){
+        self.pairing = pairing
+        super.init(category: category)
+    }
+}
+
+class ColdDrink: Beverage{
+    var vessel: String
+    init(category: String, vessel: String){
+        self.vessel = vessel
+        super.init(category: category)
+    }
+}
+
+var drinkChoices = [
+    HotCofee(category: "cofee", pairing: "biscotti"),
+    HotCofee(category: "tea", pairing: "crumpets"),
+    ColdDrink(category: "lemonade", vessel: "glass"),
+    ColdDrink(category: "beer", vessel: "frosty mug")
+]
+
+//: ### Type cast operators: as? and as!
+
+for beverage in drinkChoices{
+    if let ColdDrink = beverage as? ColdDrink{
+        print("Can I get you a \(ColdDrink.vessel) of \(ColdDrink.category) ")
+    }
+    else if let HotCofee = beverage as? HotCofee{
+        print("Can I get you a \(HotCofee.category) with \(HotCofee.pairing) ")
+    }
+}
+
+var cofeeArray: [Beverage] = [
+    HotCofee(category: "cofee", pairing: "biscotti"),
+    HotCofee(category: "tea", pairing: "crumpets"),
+]
+
+for beverage in cofeeArray{
+   let HotCofee = beverage as! HotCofee
+    print("Can I get you a \(HotCofee.category) with \(HotCofee.pairing) ")
+}
+
 //: ### Optionals can be passed as parameters to functions
 
 // Example: Picking up groceries in an optional car
-func pickUpGroceries(_ car:Car?) {
+func pickUpGroceries(car:Car?) {
     if let car = car {
         print("We'll pick up the groceries in the \(car.model)")
     } else {
@@ -184,12 +230,12 @@ func pickUpGroceries(_ car:Car?) {
 }
 
 var someCar = Car(make: "Toyota", model: "Corolla")
-pickUpGroceries(someCar)
+pickUpGroceries(car: someCar)
 
-pickUpGroceries(nil)
+pickUpGroceries(car: nil)
 
 // Example: Hosting a guest in an optional extra room
-func host(_ guest: String, extraRoom: Room?) {
+func host(guest: String, extraRoom: Room?) {
     if let extraRoom = extraRoom {
         print("Come stay with us, \(guest), you can sleep in the \(extraRoom.name).")
     } else {
@@ -198,8 +244,8 @@ func host(_ guest: String, extraRoom: Room?) {
 }
 
 var someRoom = Room(name: "guest room", occupied: false)
-host("Grandma", extraRoom: someRoom)
-host("Ryan", extraRoom: nil)
+host(guest: "Grandma", extraRoom: someRoom)
+host(guest: "Ryan", extraRoom: nil)
 
 
 
