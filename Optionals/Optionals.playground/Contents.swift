@@ -112,7 +112,10 @@ if let intValue = zee {
 
 var imageView = UIImageView()
 
+
 imageView.image = UIImage(named:"puppy_in_box")
+
+
 if let image = imageView.image {
     let size = image.size
 } else {
@@ -122,6 +125,9 @@ imageView.image
 
 //: ### Optional Chaining
 // Example 1
+
+// https://stackoverflow.com/questions/25828301/how-is-swift-if-let-evaluated
+
 var anotherImageView = UIImageView()
 anotherImageView.image = UIImage(named:"puppy_in_box")
 
@@ -159,6 +165,13 @@ class BetterViewController: UIViewController {
     var myButton: UIButton!
 }
 
+//: ### DownCasting
+class Beverage {
+    var category: String
+    
+    
+    
+}
 //: ### Optionals can be passed as parameters to functions
 
 // Example: Picking up groceries in an optional car
