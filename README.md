@@ -6,6 +6,7 @@ This repository contains Swift Syntax.
 
 ## Overview
 
-Swift Syntax is a course designed for developers transitioning into Swift. It surveys the language's main features and provides lesson-by-lesson examples for you to follow.
+Swift Syntax is a course designed for developers transitioning into Swift.
+It surveys the language's main features and provides lesson-by-lesson examples for you to follow.
 
 
